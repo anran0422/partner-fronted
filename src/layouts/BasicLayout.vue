@@ -5,7 +5,7 @@ import routes from "../config/route.ts";
 
 const router = useRouter();
 
-const DEFAULT_TILE = "双人行";
+const DEFAULT_TILE = "一路同行";
 const title = ref(DEFAULT_TILE);
 
 

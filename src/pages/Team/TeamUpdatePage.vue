@@ -23,7 +23,7 @@ onMounted(async() => {
       id,
     }
   });
-  if(res.status === 200 && res.data) {
+  if(res.code === 0 && res.data) {
     addTeamData.value = res.data;
   } else {
     alert("获取队伍信息失败");
@@ -49,7 +49,7 @@ const onSubmit = async() => {
   }
   const res = await myAxios.post('/team/update', postData);
 
-  if(res.data && res.status === 200){
+  if(res.code === 0 && res.data){
     router.push( {
       path: '/team',
       replace: true

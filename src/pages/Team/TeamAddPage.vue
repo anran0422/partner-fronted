@@ -31,7 +31,7 @@ const onSubmit = async() => {
     status: Number(addTeamData.value.status),
   });
 
-  if(res.status === 200 && res.data){
+  if(res.code === 0 && res.data){
     router.push( {
       path: '/team',
       replace: true
